@@ -14,6 +14,6 @@ distance_city_km = st.number_input('Distance to City in KM',min_value=01.0,max_v
 
 
 if st.button('Perdict Price'):
-  X = np.array([['area_sqft','bedrooms','bathrooms','age_years','distance_city_km']])
+  X = np.array([[area_sqft,bedrooms,bathrooms,age_years,distance_city_km]])
   pred = model.predict(X)[0]
   st.success(f'Estimated Price : {pred:.2f}')   # print only if the model got successful
